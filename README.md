@@ -1,3 +1,0 @@
-"# NetwonFractal" 
-# NetwonFractal
-# NetwonFractal
