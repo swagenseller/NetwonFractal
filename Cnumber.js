@@ -28,11 +28,35 @@ class Cnumber {
         
         return new Cnumber(real, imag);
     }
-    divide(num) {
+    // (a + bi) / (c + di)
+    // ac + bci + adi + bdi 
+    // denom = (c^2 + d^2)
+    divide(cnum) {
+        var conjugate = new Cnumber(cnum.a, (-1* cnum.b));
+        let muli = this.multiply(conjugate);
+        console.log( "muli = " + muli.a + " + " + muli.b + "i" );
+        let denom = (cnum.a * cnum.a) + (cnum.b * cnum.b);  
+
+        let real = muli.a / denom;
+        let imag = muli.b / denom;
+        
+        return new Cnumber(real, imag);
 
     }
-    power(num) {
-
+    // (a + bi)^2
+    power(x) {
+        if (x === 0) {
+            return new Cnumber(1,0);
+        }
+        else {
+            x--;
+            var temp = new Cnumber(this.a, this.b);
+            for (var i = 0; i < x; i++) {
+                temp = temp.multiply(this); 
+            }
+            return temp;
+        }
+        
     }
     // distance between 2 complex numbers. 
     dist(num) {
@@ -57,3 +81,15 @@ const multi = cnum3.multiply(cnum4);
 console.log(multi.a + " + " + multi.b + "i" );
 
 // division test
+const cnum5 = new Cnumber(11, 2);
+const cnum6 = new Cnumber(4, 3);
+
+const div = cnum5.divide(cnum6);
+console.log(div.a + " + " + div.b + "i" );
+
+// power test 
+
+const cnum7 = new Cnumber(4, 3);
+
+const pow = cnum7.power(5);
+console.log(pow.a + " + " + pow.b + "i" );
