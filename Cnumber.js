@@ -60,6 +60,9 @@ class Cnumber {
     }
     // distance between 2 complex numbers. 
     dist(num) {
+        var diffR = num.a - this.a;
+        var diffI = num.b - this.b;
+        return Math.sqrt(Math.pow(diffR,2) + Math.pow(diffI,2));
 
     }
     
@@ -93,3 +96,9 @@ const cnum7 = new Cnumber(4, 3);
 
 const pow = cnum7.power(5);
 console.log(pow.a + " + " + pow.b + "i" );
+
+// distance test 
+const cnum8 = new Cnumber(2, 3);
+const cnum9 = new Cnumber(5, -2);
+var distance = cnum8.dist(cnum9);
+console.log("distance between cnum8 and cnum9: " + distance);
