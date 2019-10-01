@@ -102,3 +102,4 @@ const cnum8 = new Cnumber(2, 3);
 const cnum9 = new Cnumber(5, -2);
 var distance = cnum8.dist(cnum9);
 console.log("distance between cnum8 and cnum9: " + distance);
+console.log("///////////////////")
