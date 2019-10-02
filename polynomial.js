@@ -5,7 +5,17 @@ class Polynomial {
     derivative(){
         var derive = [];
         var expon = this.arr.length - 1;
-        // loop through the and check if expon === 0
+        // loop through the arr and check if expon === 0
+        for (var i = 0; i < this.arr.length; i++) {
+            if (expon === 0) {
+                continue;
+            }
+            else {
+                derive[i] = expon * arr[i];
+                expon--;
+            }
+        }
+        return derive;
 
     }
     evaluate() {
@@ -27,7 +37,12 @@ class Polynomial {
         console.log(format);
     }
 }
-
+// test printPloy
 var coef = [3, 0, 0, 4, 0, 10];
 const test1 = new Polynomial(coef);
 test1.printPoly();
+
+// test derive
+const 
+
+
