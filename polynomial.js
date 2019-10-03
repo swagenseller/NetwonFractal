@@ -11,14 +11,16 @@ class Polynomial {
                 continue;
             }
             else {
-                derive[i] = expon * arr[i];
+                derive[i] = expon * this.arr[i];
                 expon--;
             }
         }
         return derive;
 
     }
-    evaluate() {
+    evaluate(cnum) {
+        var fx;
+        
 
     }
     // prints out the polynomial or derivative
@@ -43,6 +45,10 @@ const test1 = new Polynomial(coef);
 test1.printPoly();
 
 // test derive
-const 
+
+console.log("derivative of " + coef);
+const derive = test1.derivative();
+const test2 = new Polynomial(derive);
+test2.printPoly();
 
 
