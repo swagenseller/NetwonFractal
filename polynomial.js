@@ -26,11 +26,11 @@ class Polynomial {
         for (var i = 0; i< this.arr.length; i++) {
             if (this.arr[i] === 0) {
                 expon--;
-                continue;
+                //continue;
             }
             else {
                 var expand = cnum.power(expon);
-                console.log(" simplified at x^" + expon + ": " + expand.a + " + " + expand.b);
+                //console.log(" simplified at x^" + expon + ": " + expand.a + " + " + expand.b);
                 expand.a = this.arr[i] * expand.a;
                 expand.b = this.arr[i] * expand.b;
                 fx = fx.add(expand);
@@ -73,6 +73,8 @@ class Polynomial {
         console.log(format);
     }
 }
+/*
+
 // test printPloy
 var coef = [3, 0, 0, 4, 0, 10];
 const test1 = new Polynomial(coef);
@@ -96,4 +98,4 @@ var complex = new Cnumber(2,-3);
 var ploy = new Polynomial([1, 0, 2]);
 console.log(ploy.evaluate(complex));
 
-
+*/

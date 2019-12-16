@@ -34,7 +34,7 @@ class Cnumber {
     divide(cnum) {
         var conjugate = new Cnumber(cnum.a, (-1* cnum.b));
         let muli = this.multiply(conjugate);
-        console.log( "muli = " + muli.a + " + " + muli.b + "i" );
+        //console.log( "muli = " + muli.a + " + " + muli.b + "i" );
         let denom = (cnum.a * cnum.a) + (cnum.b * cnum.b);  
 
         let real = muli.a / denom;
@@ -68,7 +68,7 @@ class Cnumber {
     
 };
 
-
+/*
 // addition test
 const cnum1 = new Cnumber(2, 3);
 const cnum2 = new Cnumber(5, -6);
@@ -103,3 +103,5 @@ const cnum9 = new Cnumber(5, -2);
 var distance = cnum8.dist(cnum9);
 console.log("distance between cnum8 and cnum9: " + distance);
 console.log("///////////////////")
+
+*/
